@@ -1,35 +1,19 @@
 {
-  "name": "weather",
+  "name": "react-weather",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "lint": "prettier-eslint --write 'src/**/*.{js,jsx,ts,tsx}'",
+    "lint:style": "prettier-eslint --write 'src/**/*.{css,scss}'",
     "eject": "react-scripts eject",
     "build:tailwind": "tailwindcss build src/styles/tailwind.scss -o src/styles/index.scss ",
     "prestart": "npm run build:tailwind",
     "prebuild": "npm run build:tailwind"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.30",
-    "@fortawesome/free-solid-svg-icons": "^5.14.0",
-    "@fortawesome/react-fontawesome": "^0.1.11",
     "classnames": "^2.2.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -48,7 +32,11 @@
     "@types/react-dom": "^16.9.8",
     "@types/react-router-dom": "^5.1.5",
     "autoprefixer": "^10.0.0",
+    "eslint": "^7.10.0",
     "node-sass": "^4.14.1",
+    "prettier-eslint": "^11.0.0",
+    "prettier-eslint-cli": "^5.0.0",
+    "prettier-stylelint": "^0.4.2",
     "tailwindcss": "^1.8.10"
   }
 }

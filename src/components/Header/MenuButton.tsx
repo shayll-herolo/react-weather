@@ -1,4 +1,5 @@
 import React from "react";
+import {ReactComponent as MenuIcon } from '../../assets/menu.svg';
 
 export interface MenuButtonProps {
     click: React.MouseEventHandler
@@ -12,11 +13,7 @@ export default function MenuButton({className, click}: MenuButtonProps) {
           className="flex items-center px-3 py-2 border rounded text-purple-200 border-purple-400 hover:text-white hover:border-white"
           onClick={click}
         >
-          <img
-            className="h-3 w-3"
-            src={process.env.PUBLIC_URL + "/assets/menu.svg"}
-            alt="Menu"
-          />
+          <MenuIcon className="h-3 w-3" />
         </button>
       </div>
     );
